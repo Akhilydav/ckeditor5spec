@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains ckeditor special characters module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ckeditor_specialchars_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ckeditor_specialchars':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Overrides Drupal core handling of specialChars CKEditor plugin to provide ability to configure character available for user to insert. Compatible with CKEditor versions 4 and 5.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_ckeditor5_plugin_info_alter().
+ */
+function ckeditor_specialchars_ckeditor5_plugin_info_alter(array &$plugin_definitions): void {
+  /*assert($plugin_definitions['ckeditor5_specialCharacters'] instanceof CKEditor5PluginDefinition);
+  $link_plugin_definition = $plugin_definitions['ckeditor5_link']->toArray();
+  $link_plugin_definition['ckeditor5']['config']['link']['decorators'][] = [
+    'mode' => 'manual',
+    'label' => t('Open in new window'),
+    'attributes' => [
+      'target' => '_blank',
+    ],
+  ];
+  $plugin_definitions['ckeditor5_link'] = new CKEditor5PluginDefinition($link_plugin_definition);*/
+  $plugin_definitions['ckeditor5_specialCharacters']->setClass('Drupal\ckeditor_specialchars\Plugin\CKEditor5Plugin\SpecialChars');
+//  dump($plugin_definitions['ckeditor5_specialCharacters']);
+//  die();
+}

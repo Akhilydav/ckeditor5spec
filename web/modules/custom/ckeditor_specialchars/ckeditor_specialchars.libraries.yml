@@ -1,0 +1,5 @@
+ck5specialchars:
+  js:
+    js/specialcharst.js: {}
+  dependencies:
+    - core/ckeditor5

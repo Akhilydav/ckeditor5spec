@@ -700,3 +700,11 @@ function ckeditor5_editor_presave(EditorInterface $editor) {
     $editor->setSettings($settings);
   }
 }
+
+/**
+ * Implements hook_editor_js_settings_alter().
+ */
+function ckeditor5_editor_js_settings_alter(array &$settings) {
+  // Add Greek alphabet to specialChars.
+  $settings['editor']['formats']['restricted_html']['editorSettings']['specialChars'][] = array('Αaa', 'A11111lpha');
+}

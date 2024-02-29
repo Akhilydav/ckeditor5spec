@@ -1,0 +1,7 @@
+name: CKEditor specialChars
+description: Overrides Drupal core handling of specialChars CKEditor plugin to provide ability to configure character available for user to insert.
+package: User interface
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:ckeditor5

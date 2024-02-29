@@ -1,0 +1,7 @@
+ckeditor5_custom_plugin:
+  version: 1.x
+  js:
+    js/ckeditor5_custom_plugin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

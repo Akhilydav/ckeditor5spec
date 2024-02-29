@@ -1,0 +1,18 @@
+# # @see https://www.drupal.org/docs/drupal-apis/plugin-api/annotations-based-plugins
+# #   For information on using annotations to define plugins.
+# # @see the CKEditor 5 module's README.md for more details regarding plugin
+# #   configuration options.
+# # cSpell:ignore Emoji
+
+# ckeditor_emoji:
+#   ckeditor5:
+#     plugins:
+#       - emojiPlugin.specialCharacters
+#   drupal:
+#     label: Emoji
+#     library: ckeditor_emoji/specialCharacters
+#     admin_library: ckeditor_emoji/emoji.admin
+#     toolbar_items:
+#       Emoji:
+#         label: specialCharacters
+#     elements: false

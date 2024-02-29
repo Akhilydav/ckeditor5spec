@@ -1,0 +1,11 @@
+# Plugin \Drupal\ckeditor_specialchars\Plugin\CKEditor5Plugin\SpecialChars
+ckeditor5.plugin.ckeditor5_specialCharacters:
+  type: mapping
+  label: 'Special characters'
+  mapping:
+    character_set:
+      type: string
+      label: 'Special characters'
+    replace:
+      type: boolean
+      label: 'Replace default characters?'

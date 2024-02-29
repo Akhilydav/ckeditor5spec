@@ -1,0 +1,19 @@
+{
+    "name": "custom_ckeditor",
+    "version": "1.0.0",
+    "description": "Drupal module for integrating CKEditor 5 with webpack",
+    "private": true,
+    "scripts": {
+      "build": "webpack --mode production"
+    },
+    "devDependencies": {
+      "webpack": "^5.0.0",
+      "webpack-cli": "^4.0.0",
+      "clean-webpack-plugin": "^4.0.0",
+      "copy-webpack-plugin": "^9.0.0",
+      "babel-loader": "^8.0.0",
+      "@babel/core": "^7.0.0",
+      "@babel/preset-env": "^7.0.0"
+    }
+  }
+  

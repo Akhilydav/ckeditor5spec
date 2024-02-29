@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Serialization\Yaml;
+
+/**
+ * Implements hook_ckeditor5_plugin_info().
+ */
+function my_custom_module_ckeditor5_plugin_info() {
+  return [
+    'SpecialCharacters' => [
+      'class' => '\Drupal\mymodule\Plugin\CKEditor5\SpecialCharactersPlugin',
+      'editor' => 'ckeditor5',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ckeditor5_plugins().
+ */
+function my_custom_module_ckeditor5_plugins() {
+  return [
+    'SpecialCharacters',
+  ];
+}
